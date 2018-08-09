@@ -1,6 +1,8 @@
-from sympy import *
+from math import *
+
 import numpy as np
-from math import*
+from sympy import *
+
 
 def linear_kalman(uvaAccelero, sUAccelero, uLightH, sULightHI, uTrue, sUTrueI):
 

@@ -7,6 +7,7 @@ file = open("C:/Users/JulienM/Documents/GitHub/XY-Plotter-2.0-experimentation/da
 
 # Standard deviation of values on the measurement
 s_measurements = np.zeros((9,30))
+# Temporary variable to calculate standard deviation
 sum_dif_square_measurements = np.zeros((9,30))
 means = np.zeros((9,30))
 I_pdiode = np.zeros(3)
@@ -36,8 +37,9 @@ for l in range(30):
             s_measurements[6+k][l] = sqrt(sum_dif_square_measurements[6+k][l] / 100)            
 
 file.close()
-#print(means)
-print(sum_dif_square_measurements)
+for i in range(9):
+    print(means[i][0])
+    #print(s_measurements[i][0])
 
 # Redefine 30 points that are means of each 100 measurement
 I_pdiode = np.zeros((3,30))
