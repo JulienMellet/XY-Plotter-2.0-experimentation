@@ -15,12 +15,12 @@ import numpy as np
 
 def main():
     port = serial_init()
-    # Number of step
+    # Number of step on stepper motor
     d = 1314
     # Distance in centimeter
     x = 30
-
-    file = open("data_Madgwick_2.txt","w")
+    
+    file = open("data_Kalman_7.txt","w")
 
     rx = processing.init_position()
 
@@ -34,14 +34,14 @@ def main():
     s_True = np.zeros(3)
     for i in range(3):
         s_True[i] = 0.00001
-
+    
     for i in range(x+1):
         start = time.time()
         go_to(int(i*d/x), port)
         end = time.time()
         time.sleep(0.2)
         duration = end - start
-    
+        
         for j in range(100):
             I_LH, data_accel, s_acc = processing.get_position(rx)
             I_Accelero = data_accel[0]
@@ -56,10 +56,10 @@ def main():
             s_LH = [1.02121*10**(-6), 8.667*10**(-7), 9.6482*10**(-7)]
 
             # Update position calculated by Kalman filter
-            #I_True, s_True = kalman.linear_kalman(data_accel, s_Accelero, I_LH, s_LH, I_True, s_True)
+            I_True, s_True = kalman.linear_kalman(data_accel, s_Accelero, I_LH, s_LH, I_True, s_True)
 
             # Madgwick fusion
-            I_True = kalman.madgwick(data_accel, s_Accelero, I_LH, s_LH)
+            #I_True = kalman.madgwick(data_accel, s_Accelero, I_LH, s_LH)
 
             # Print file
             # [duration, I_LH, I_Accelero, I_True]
