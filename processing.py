@@ -8,8 +8,7 @@ from math import *
 import numpy as np
 from reception import *
 
-# Filter 1 is low pass filter ; Filter 2 is average of 4 last data
-FILTER = 2
+
 #########################################################
 # PROCESSING LightHouse
 #########################################################
@@ -165,8 +164,7 @@ def get_position(rx):
     # Periode of one scan in micro seconds
     T_scan = 8333
     time += 1
-    # Factor of smoothness for low pass filter
-    factor = 0.2
+
 
     # Convert time of scanning into angle in radians
     for i in range(4):
@@ -175,6 +173,11 @@ def get_position(rx):
     # For Lighthouses
     for i in range(4):
         I_diode[i] = diode_pos(scanAngle[i])
+
+    # Filter 1 is low pass filter ; Filter 2 is average of 4 last data
+    FILTER = 1
+    # Factor of smoothness for low pass filter
+    factor = 0.5
 
     # Low pass filter
     if FILTER == 1 :
@@ -205,7 +208,7 @@ def get_position(rx):
 
     # Reset position of IMU at (1/120 * 4)s
     # We consider variance on measurement, the same on 3 axis
-    if time >= 4 :
+    if time >= 60 :
         # off_set allows to calibrate position of the IMU
         off_set = averagePos
         I_Accelero = [0, 0, 0]
