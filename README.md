@@ -1,12 +1,9 @@
-﻿[![alt text](images/Logo.png "Makeblock Logo") ](https://www.Makeblock.cc)
-
-The package consists of the software(Arduino firmware and GRemote), structure assembly instruction and program instruction.
 
 ###Brief Procedure
 
-1. Download and install Arduino-1.0.5，http://arduino.cc/en/Main/Software
+1. Download and install Arduino-1.0.5?http://arduino.cc/en/Main/Software
 
-2. Download the software package and decompress it，https://github.com/Makeblock-official/XY-Plotter-2.0/archive/master.zip
+2. Download the software package and decompress it?https://github.com/Makeblock-official/XY-Plotter-2.0/archive/master.zip
 
 3. Connect Me baseboard to computer with micro USB cable.
 
@@ -28,7 +25,7 @@ If you want change the source code, you could find it in GRemotFull/source/GRemo
 
 1. Download and install Processing-2.1.2. http://processing.org/
 2. Install the Processing library, controlP5 -- copy the whole folder to C:\Users\xxx\Documents\Processing\libraries
-3. Open the GRemote.pde by Processing, DIY the code and click the “run” button to test it.
+3. Open the GRemote.pde by Processing, DIY the code and click the �run� button to test it.
 
 [![alt text](images/XY Plotter 2.0.jpg "Makeblock XY Plotter 2.0")](http://www.makeblock.cc/xy-plotter-robot-kit-2-0/)
 
@@ -50,17 +47,17 @@ data_Kalman_* and data_Madgwick_* are two types of data taken, as showing on the
 
 [![alt text](images/experiment_2.png "LH looking each other")]
 
-* Along an almost line (Data → Data_2 → Data_3)
+* Along an almost line (Data ? Data_2 ? Data_3)
 	* Oscillations at different amplitudes 
-		* 10 cm → data_2_Kalman_Sin_1
-		* 5 cm  → data_2_Kalman_Sin_2
-		* 20 cm → data_2_Kalman_Sin_3
+		* 10 cm ? data_2_Kalman_Sin_1
+		* 5 cm  ? data_2_Kalman_Sin_2
+		* 20 cm ? data_2_Kalman_Sin_3
 * Low pass filter 
-	* Standard → Mean of 4 last values
-	* 10% of new data → data_2_filter01_Sin_2
-	* 50% of nes data → data_2_filter05_Sin_2
+	* Standard ? Mean of 4 last values
+	* 10% of new data ? data_2_filter01_Sin_2
+	* 50% of nes data ? data_2_filter05_Sin_2
 * IMU
-	* Standard → refresh data at 30 Hz
-	* 0,5 s in static → data_2_IMU05s_static
-	* 0,5 s in oscillations → data_2_IMU05s_Sin_2
+	* Standard ? refresh data at 30 Hz
+	* 0,5 s in static ? data_2_IMU05s_static
+	* 0,5 s in oscillations ? data_2_IMU05s_Sin_2
 
