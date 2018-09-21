@@ -25,7 +25,7 @@ If you want change the source code, you could find it in GRemotFull/source/GRemo
 
 1. Download and install Processing-2.1.2. http://processing.org/
 2. Install the Processing library, controlP5 -- copy the whole folder to C:\Users\xxx\Documents\Processing\libraries
-3. Open the GRemote.pde by Processing, DIY the code and click the ìrunî button to test it.
+3. Open the GRemote.pde by Processing, DIY the code and click the ‚Äúrun‚Äù button to test it.
 
 [![alt text](images/XY Plotter 2.0.jpg "Makeblock XY Plotter 2.0")](http://www.makeblock.cc/xy-plotter-robot-kit-2-0/)
 
@@ -39,13 +39,13 @@ Two experiment have been done to know how change the accuracy with LH positions.
 
 1. Experiment with LH look in the same direction.
 
-[![alt text](images/experiment_1.png "LH looking same dirrection")]
+![](images/experiment_1.png "LH looking same dirrection")
 
 data_Kalman_* and data_Madgwick_* are two types of data taken, as showing on the picture, along a line. Filter of LH data use a mean of 4 last data and IMU position is reset at 30 Hz.
 
 2. Experiment with LH look each other.
 
-[![alt text](images/experiment_2.png "LH looking each other")]
+![](images/experiment_2.png "LH looking each other")
 
 * Along an almost line (Data ? Data_2 ? Data_3)
 	* Oscillations at different amplitudes 
