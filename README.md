@@ -9,13 +9,13 @@ Two experiment have been done to know how change the accuracy with LH positions.
 
 1. Experiment with LH look in the same direction.
 
-![](images/experiment_1.png)
+![](images/experiment_1.PNG)
 
 data_Kalman_* and data_Madgwick_* are two types of data taken, as showing on the picture, along a line. Filter of LH data use a mean of 4 last data and IMU position is reset at 30 Hz.
 
 2. Experiment with LH look each other.
 
-![](images/experiment_2.png)
+![](images/experiment_2.PNG)
 
 * Along an almost line (Data ? Data_2 ? Data_3)
 	* Oscillations at different amplitudes 
@@ -41,12 +41,12 @@ data_Kalman_* and data_Madgwick_* are two types of data taken, as showing on the
 3. Connect Me baseboard to computer with micro USB cable.
 
 4. Open GCodepraser->GCodeParser.ino by Arduino IDE. Click Tools->Serial Ports, choose COM XX (Not COM1 and COM2). Click Tools->Boards, choose Arduino Leonardo. At last, click "upload" button on the right-top corner.
-![alt text](images/Upload.png "Upload program to Me Baseboard")(https://raw.githubusercontent.com/Makeblock-official/XY-Plotter-2.0/master/images/Upload.png)
+![alt text](images/Upload.png "Upload program to Me Baseboard")
 
 5. Close Arduino IDE, open GRemoteFull->GRemote.bat. 
 
 6. Set the COM port, then GRemote will show you the UI as follows. That all for this part.
-![alt text](images/GRemote.jpg "Set the COM port")(https://raw.githubusercontent.com/Makeblock-official/XY-Plotter-2.0/master/images/GRemote.jpg)
+![alt text](images/GRemote.jpg "Set the COM port")
 
 7. Now, you could control the XY-Plotter 2.0 by mouse and keyboard. And, you can also run it with Gcode. You could generate Gcode file by another software (dxf2gcode(https://code.google.com/p/dxf2gcode/) or any other capable). You should save the Gcode file with .cnc and open it by GRemote.
 
@@ -60,5 +60,5 @@ If you want change the source code, you could find it in GRemotFull/source/GRemo
 2. Install the Processing library, controlP5 -- copy the whole folder to C:\Users\xxx\Documents\Processing\libraries
 3. Open the GRemote.pde by Processing, DIY the code and click the “run” button to test it.
 
-![](images/XY%20Plotter%202.0.jpg)(http://www.makeblock.cc/xy-plotter-robot-kit-2-0/)
+![](images/XY%20Plotter%202.0.jpg)
 
