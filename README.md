@@ -53,10 +53,12 @@ Like previous graphs, on the left is represented a calculated deplacement of 1cm
 
 The 1 cm displacement is more respected in this case.
 
+Here are presented measurements on an alternative displacement. And find also a representation of data before and after fusion.
 
 ![](images/experiment_2_graphs_2.PNG)
 
+Sensor fusion is not useful because standard deviation of optical measurement seems to be preponderant on standard deviation of the IMU. 0,1 filter on optical measurement is smoother than others. Then Madgwick or Kalman filter have comparable results.
 
 3. Discussion
 
-Accuracy of the tracking seems to depend of the 3D position of the tracker. Accuracy of the optical postitionning system seems to have to be improved to see effects of the data fusion with the IMU. 
+Accuracy of 3D tracking seems to depend of the 3D position of the tracker. Accuracy of the optical postitionning system seems to have to be improved to see effects of the data fusion with the IMU. 
