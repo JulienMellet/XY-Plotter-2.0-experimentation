@@ -33,12 +33,30 @@ data_Kalman_* and data_Madgwick_* are two types of data taken, as showing on the
 
 ## Main results
 
-Graphs and data processing are available on these following google sheets.
+Graphs and data processing are available on these following google sheets. There
 
 1. Lighthouses looking in the same direction
 https://docs.google.com/spreadsheets/d/1U9xUP7-oBSLRfHlx0UvoTQzaMAvFugudtHTGALtR2J4/edit?usp=sharing
 
+On the left is represented a calculated deplacement of 1cm along the line. To the right is the claculated 2D displacement of the tracker.
+
+![](images/experiment_1_graphs.PNG)
+
+Accuracy is not constant and the displacement of 1 cm is not respected. But the line in the space is almost correct.
+
 2. LightHouses looking eachother
 https://docs.google.com/spreadsheets/d/1cFtR_RXirnSVjp703GaSUJfKXmqBP_hrrPQl3wcJRR8/edit?usp=sharing
 
+Like previous graphs, on the left is represented a calculated deplacement of 1cm along the line. To the right is the claculated 2D displacement of the tracker.
 
+![](images/experiment_2_graphs.PNG)
+
+The 1 cm displacement is more respected in this case.
+
+
+![](images/experiment_2_graphs_2.PNG)
+
+
+3. Discussion
+
+Accuracy of the tracking seems to depend of the 3D position of the tracker. Accuracy of the optical postitionning system seems to have to be improved to see effects of the data fusion with the IMU. 
